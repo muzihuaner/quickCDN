@@ -9,3 +9,7 @@ QuickCDN 是 [欢哥科技](https://huangetech.gthub.io/) 支持并维护的前�
 
 
 首页地址：
+
+https://cdn.quickso.cn/
+
+欢迎使用！
