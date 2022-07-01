@@ -24,6 +24,11 @@ html,body{
         outline: none;
         
     }
+    .footer-info {
+        margin-right: 30px;
+        width: 340px;
+        padding-left: 10px!important;
+    }
 
 }
 
