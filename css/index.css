@@ -2,6 +2,9 @@ body {
     margin: 0;
     padding: 0;
 }
+html,body{
+    height: 100%;
+}
 
 @media only screen and (max-width: 768px) {
     .mostused-packages {
@@ -14,7 +17,7 @@ body {
         font-size: 16px;
         border-radius: 5px;
         height: 30px!important;
-        width: 340px!important;
+        width: 80%!important;
         text-align: center;
         border-color: transparent;
         margin-bottom: 40px;
@@ -63,8 +66,8 @@ header p {
     color: #a3a3a4;
     font-size: 16px;
     position: relative;
-    right: 30px;
-    top: 0px;
+    right: 35px;
+    top: 2px;
 }
 
 table.gridtable {
