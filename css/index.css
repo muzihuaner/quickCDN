@@ -77,7 +77,7 @@ header p {
 }
 .mylist{
     width: 100%;
-    overflow: auto;
+    overflow-y: hidden;
     display: block;
 }
 table.gridtable {
