@@ -83,6 +83,7 @@ table.gridtable {
     border-width: 1px;
     border-color: #666666;
     border-collapse: collapse;
+    overflow: hidden;
 }
 
 div.user > tr > th {
