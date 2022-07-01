@@ -74,16 +74,20 @@ header p {
     right: 35px;
     top: 2px;
 }
-
-table.gridtable {
+div.alst{
     width: 100%;
+    overflow: auto;
+    display: block;
+}
+table.gridtable {
+    min-width: 100%;
     font-family: verdana, arial, sans-serif;
     font-size: 11px;
     color: #333333;
     border-width: 1px;
     border-color: #666666;
     border-collapse: collapse;
-    overflow: hidden;
+    
 }
 
 div.user > tr > th {
@@ -95,6 +99,7 @@ div.user > tr > th {
 }
 
 div.user > tr > td {
+    min-width: 50%;
     border-width: 1px;
     padding: 8px;
     border-style: solid;
