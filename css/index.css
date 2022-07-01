@@ -33,6 +33,7 @@ html,body{
 }
 
 header {
+    width: 100%;
     position: relative;
     text-align: center;
     background-color: #27ae60;
@@ -74,7 +75,7 @@ header p {
     right: 35px;
     top: 2px;
 }
-div.alst{
+.mylist{
     width: 100%;
     overflow: auto;
     display: block;
