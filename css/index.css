@@ -10,6 +10,17 @@ body {
     .row2{
         display: block!important;
     }
+    header .search {
+        font-size: 16px;
+        border-radius: 5px;
+        height: 30px!important;
+        width: 340px!important;
+        text-align: center;
+        border-color: transparent;
+        margin-bottom: 40px;
+        outline: none;
+        
+    }
 
 }
 
@@ -31,12 +42,13 @@ header h1 {
 header .search {
     font-size: 16px;
     border-radius: 5px;
-    height: 30px;
-    width: 340px;
+    height: 44px;
+    width: 572px;
     text-align: center;
     border-color: transparent;
     margin-bottom: 40px;
     outline: none;
+    
 }
 
 header p {
@@ -47,7 +59,6 @@ header p {
 .form-group{
     position: relative;
 }
-
 .fa {
     color: #a3a3a4;
     font-size: 16px;
