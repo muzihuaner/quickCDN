@@ -44,6 +44,9 @@ header p {
     font-size: 21px;
     font-weight: 200;
 }
+.form-group{
+    position: relative;
+}
 
 .fa {
     color: #a3a3a4;

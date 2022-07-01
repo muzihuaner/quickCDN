@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入框小图标</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+   
+    <style type="text/css">
+     .box01{
+        color: #434343;
+        position: relative;
+        margin-bottom: 20px;
+     }
+     .box01 input{
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         appearance:none ;
+         outline: 0;
+         width: 270px;
+         height: 30px;
+         border:0px solid #fff;
+         border-radius: 20px;
+         box-shadow:0 0 5px 2px rgba(0,0,0,0.1);
+         padding: 0 30px 0 15px;
+     }
+     .box01 label{
+         font-size: 16px;
+         z-index: 2;
+         position: absolute;
+         left: 109px;
+         top:15%;
+         color: #b2b2b2;
+     }
+     /*利用<i>来安放图标*/
+     .fa{
+         display: inline-block;
+         height: 16px;
+         width: 16px;
+         position: absolute;
+         top: 24%;
+         left: 290px;
+         z-index: 2;
+     }
+ 
+     
+    </style>
+</head>
+<body>
+    <div class="box01">
+        <input type="text" id="tip" placeholder="搜索你喜欢的">
+        <i class="fa fa-search" onclick="search()"></i>
+    </div>
+    
+    
+</body>
+</html>
