@@ -504,7 +504,7 @@
             dropBox.style.display = "none";
             $.ajax({
                 type: "get",
-                url: "https://api.cdnjs.com/libraries/?search=" + a, // 这里为后台写入的json文件路径。
+                url: "https://api.cdnjs.com/libraries?search=" + a, // 这里为后台写入的json文件路径。
                 dataType: "json",
                 timeout: 2000, //超时时间，考虑到网络问题，5秒还是比较合理的
                 success: function (response) {
