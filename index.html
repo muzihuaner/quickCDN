@@ -7,11 +7,11 @@
     <title>QuickCDN-开源项目免费 CDN 加速服务</title>
     <link rel="icon" type="image/ico" href="https://quickso.cn/favicon.ico">
     <link rel="stylesheet" href="css/index.css">
-    <script src="//fastly.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//gcore.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/jquery-3.4.1.js"></script>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.5.1/styles/base16/nebula.min.css" rel="stylesheet">
+    <link href="https://cdnjs.quickso.cn/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+ 
 </head>
 
 <body>
@@ -20,7 +20,7 @@
         <h1>QuickCDN</h1>
         <p>稳定、快速、免费的前端开源项目 CDN 加速服务
             <br>
-            <span class="package-amount">共收录了 <strong>4273</strong> 个前端开源项目</span>
+            <span class="package-amount">共收录了 <strong>4265</strong> 个前端开源项目</span>
         </p>
         <div class="form-group">
             <input id="text" type="text" class="form-control search clearable" placeholder="搜索开源库，例如：jquery"
@@ -409,9 +409,9 @@
                     <p>自2022年上线以来已经累计为近百万网站提供了稳定、可靠的免费 CDN 加速服务。</p>
                     <p>反馈或建议请发送邮件至：muzihuaner@qq.com</p>
                 </div>
-                <script>
+                <!-- <script>
                     hljs.initHighlightingOnLoad();
-                </script>
+                </script> -->
 
                 <div class="footer-info">
                     <h4>如何使用？</h4>
@@ -420,11 +420,70 @@
                     <p>导入js库</p>
 
                     <pre
-                        class='hljs'><code><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://cdnjs.cloudflare.com/ajax/libs/xxx/1.0.0/xxx.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
+                        class='hljs'><code><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://cdnjs.quickso.cn/ajax/libs/xxx/1.0.0/xxx.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre>
                     <p>导入css库</p>
                     <pre
-                        class='hljs'><code>&lt;link <span class="hljs-variable">href=</span><span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/xxx/1.0.0/css/xxx.css"</span> <span class="hljs-variable">rel=</span><span class="hljs-string">"stylesheet"</span>&gt;</code></pre>
+                        class='hljs'><code>&lt;link <span class="hljs-variable">href=</span><span class="hljs-string">"https://cdnjs.quickso.cn/ajax/libs/xxx/1.0.0/css/xxx.css"</span> <span class="hljs-variable">rel=</span><span class="hljs-string">"stylesheet"</span>&gt;</code></pre>
                 </div>
+                <style>
+                    .footer-info pre {
+                        position: relative;
+                        background-color: #282424;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        padding: 10px;
+                    }
+
+                    pre .btn-pre-copy {
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        -khtml-user-select: none;
+                        user-select: none;
+                        position: absolute;
+                        top: 10px;
+                        right: 12px;
+                        font-size: 12px;
+                        line-height: 1;
+                        cursor: pointer;
+                        color: hsla(0, 0%, 54.9%, .8);
+                        transition: color .1s;
+                    }
+                </style>
+                <script>
+                    $(function () {
+                        //给每一串代码元素增加复制代码节点
+                        let preList = $(".footer-info pre");
+                        for (let pre of preList) {
+                            //给每个代码块增加上“复制代码”按钮
+                            let btn = $("<span class=\"btn-pre-copy\" onclick='preCopy(this)'>复制代码</span>");
+                            btn.prependTo(pre);
+                        }
+                    });
+
+                    //执行复制代码操作
+                    function preCopy(obj) {
+                        //执行复制
+                        let btn = $(obj);
+                        let pre = btn.parent();
+                        //为了实现复制功能。新增一个临时的textarea节点。使用他来复制内容
+                        let temp = $("<textarea></textarea>");
+                        //避免复制内容时把按钮文字也复制进去。先临时置空
+                        btn.text("");
+                        temp.text(pre.text());
+                        temp.appendTo(pre);
+                        temp.select();
+                        document.execCommand("Copy");
+                        temp.remove();
+                        //修改按钮名
+                        btn.text("复制成功");
+                        //一定时间后吧按钮名改回来
+                        setTimeout(() => {
+                            btn.text("复制代码");
+                        }, 1500);
+                    }
+
+                </script>
             </div>
             <div class="footer-sponsors">
                 <h4>友情链接</h4>
@@ -444,7 +503,7 @@
                     <li>
                         <a href="https://www.staticfile.org/">StaticfileCDN</a>
                     </li>
-                  
+
                     <li>
                         <a href="https://www.bootcdn.cn/">BootCDN</a>
                     </li>
@@ -508,12 +567,18 @@
                 dataType: "json",
                 timeout: 2000, //超时时间，考虑到网络问题，5秒还是比较合理的
                 success: function (response) {
+
+                    var reg = new RegExp("cdnjs.cloudflare.com", "g")//替换链接
+                    var data = JSON.parse(JSON.stringify(response).replace(reg, 'cdnjs.quickso.cn'));
+
+                    console.log(data)
                     var html = '<tr><th>库名</th><th>引用地址</th></tr>';
-                    for (var p in response["results"]) {
-                        // console.log(response["results"][p].name + " " + response["results"][p].latest)
-                        html += '<tr><td>' + response["results"][p].name + '</td>' + '<td>' + response["results"][p].latest + '</td></tr>';
+                    for (var p in data["results"]) {
+                        html += '<tr><td>' + data["results"][p].name + '</td>' + '<td>' + data["results"][p].latest + '</td></tr>';
                         $('.user').html(html);
                     }
+                    var libsnum=data["total"].value
+                    console.log(libsnum)
                 },
                 complete: function (XMLHttpRequest, status) { //当请求完成时调用函数
                     if (status == 'timeout') {//status == 'timeout'意为超时,status的可能取值：success,notmodified,nocontent,error,timeout,abort,parsererror 
