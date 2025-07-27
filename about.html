@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 - QuickCDN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.quickso.cn/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#27ae60',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- 导航栏 -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-primary">QuickCDN</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-gray-700 dark:text-gray-200 hover:text-primary">首页</a>
+                    <a href="/about.html" class="text-gray-700 dark:text-gray-200 hover:text-primary">关于</a>
+                    <a href="/links.html" class="text-gray-700 dark:text-gray-200 hover:text-primary">友情链接</a>
+                    <button id="darkModeToggle" class="text-gray-700 dark:text-gray-200">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="pt-20 pb-8">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+                <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">关于 QuickCDN</h1>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="mb-4">QuickCDN 是一个开源的公共资源库，旨在为开发者提供快速、可靠的 CDN 服务。</p>
+                    <h2 class="text-2xl font-bold mt-6 mb-4">特点</h2>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>快速搜索：方便查找所需的 JavaScript 库</li>
+                        <li>实时响应：即时获取库的最新版本</li>
+                        <li>稳定可靠：提供稳定的 CDN 服务</li>
+                        <li>开源免费：代码完全开源，可自由使用</li>
+                    </ul>
+                    <h2 class="text-2xl font-bold mt-6 mb-4">联系我们</h2>
+                    <p>如果您有任何问题或建议，欢迎通过以下方式联系我们：</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li>Email：<a href="mailto:admin@huangetech.com" class="text-primary hover:underline">admin@huangetech.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-white dark:bg-gray-800 shadow-md mt-8">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-gray-600 dark:text-gray-400">
+                <p>© 2025 QuickCDN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/dark-mode.js"></script>
+</body>
+</html>
